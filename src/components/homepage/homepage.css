@@ -1417,6 +1417,11 @@ label {
   align-items: center;
 }
 
+.site-header-inner button {
+  background-color: transparent;
+  border: none;
+}
+
 .header-links {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

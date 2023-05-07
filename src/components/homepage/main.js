@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Main() {
+  const navigate = useNavigate();
   return (
     <section id="Main" className="hero">
       <div className="container">
@@ -15,9 +18,12 @@ export default function Main() {
               and compete against other talented programmers?
             </p>
             <div className="hero-cta">
-              <a className="button button-primary" href="#">
+              <button
+                onClick={() => navigate("/login")}
+                className="button button-primary"
+              >
                 Start
-              </a>
+              </button>
             </div>
           </div>
           <div className="hero-figure anime-element">
