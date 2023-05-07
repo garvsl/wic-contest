@@ -1,5 +1,4 @@
 import "./App.css";
-import Auth from "./components/auth";
 import Homepage from "./components/homepage/homepage";
 
 import {
@@ -8,11 +7,14 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Login from "./components/login/login";
+import Question from "./components/question/question";
 
 /*
 we need criteria for the type of question and its difficulty and the time that it would take to complete.
 
 The flow will be a landing page that shows information, rules ,and the prizes
+make sure they login using the school email check it
 then user can log in where they will be directed to a screen that says start
 once they press start they will be directed to a question and a timer will start once they start
 --what will happen to the timer/question if they back out, close the tab etc
@@ -32,9 +34,13 @@ redirect them back.
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Homepage />}>
-      {/* <Route index element={<Homepage />}></Route>   */}
-    </Route>
+    <>
+      <Route path="/" element={<Homepage />}></Route>
+      <Route path="/login" element={<Login />}></Route>
+      <Route path="login/question">
+        <Route path=":num" element={<Question />}></Route>
+      </Route>
+    </>
   )
 );
 
