@@ -48,7 +48,7 @@ export default function Auth({ setLoginStatus, loginStatus }) {
           console.log("not logged in");
         }
       } catch (e) {
-        throw e;
+        console.error("auth", e);
       }
     });
 

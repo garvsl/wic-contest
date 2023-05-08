@@ -32,6 +32,7 @@ h4 {
 }
 
 p {
+  color: whitesmoke;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -1695,6 +1696,10 @@ label {
   box-shadow: -20px 32px 64px rgba(0, 0, 0, 0.25);
 }
 
+body {
+  background-color: #242830;
+}
+
 .hero-figure-box-05 {
   left: 17.4%;
   top: 13.3%;
@@ -1910,8 +1915,9 @@ label {
 
 .projects {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
+  justify-content: space-around;
 }
 
 .project {

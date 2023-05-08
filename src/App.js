@@ -1,6 +1,6 @@
 import "./App.css";
 import Homepage from "./components/homepage/homepage";
-
+import { ChakraProvider } from "@chakra-ui/react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -45,5 +45,9 @@ const router = createBrowserRouter(
 );
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  );
 }
