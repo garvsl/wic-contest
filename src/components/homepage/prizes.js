@@ -1,7 +1,8 @@
-import razer from "../../images/razerKraken.webp";
+import razer from "../../images/razerKraken.png";
 import logitech from "../../images/logitech.png";
 import monitor from "../../images/monitor.png";
 import {
+  Badge,
   Card,
   CardBody,
   CardHeader,
@@ -20,13 +21,16 @@ export default function Prizes() {
           </div>
           <SimpleGrid
             spacing={4}
-            templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+            templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
           >
-            <Card backgroundColor="blackAlpha.300" maxW="sm">
+            <Card backgroundColor="blackAlpha.300" maxW="lg">
+              <Badge width={"fit-content"} colorScheme="green">
+                1st
+              </Badge>
               <CardHeader>
                 <Flex justifyContent="center">
-                  <Heading color="white" size="md">
-                    Samsung Essential 27" HD LED Monitor
+                  <Heading color="white" size="sm">
+                    Samsung 27" Monitor
                   </Heading>
                 </Flex>
               </CardHeader>
@@ -39,12 +43,14 @@ export default function Prizes() {
               </CardBody>
             </Card>
 
-            <Card backgroundColor="blackAlpha.300" maxW="sm">
+            <Card backgroundColor="blackAlpha.300" maxW="lg">
+              <Badge width={"fit-content"} colorScheme="purple">
+                2nd
+              </Badge>
               <CardHeader>
                 <Flex justifyContent="center">
-                  <Heading color="white" size="md">
-                    Logitech Wired Mechanical Tactile Switch Gaming Keyboard
-                    With Backlit Keys
+                  <Heading color="white" size="sm">
+                    Logitech Mech Keyboard
                   </Heading>
                 </Flex>
               </CardHeader>
@@ -57,12 +63,14 @@ export default function Prizes() {
               </CardBody>
             </Card>
 
-            <Card backgroundColor="blackAlpha.300" maxW="sm">
+            <Card backgroundColor="blackAlpha.300" maxW="lg">
+              <Badge width={"fit-content"} colorScheme="pink">
+                3rd
+              </Badge>
               <CardHeader>
                 <Flex justifyContent="center">
-                  <Heading color="white" size="md">
-                    Razer Kraken Gaming Headset With Retractable Noise Isolating
-                    Microphone
+                  <Heading color="white" size="sm">
+                    Razer Kraken Headset
                   </Heading>
                 </Flex>
               </CardHeader>

@@ -4,8 +4,10 @@ import { signInWithPopup, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../config/firebase";
 import { getDoc, collection, setDoc, doc } from "firebase/firestore";
+import { useToast } from "@chakra-ui/react";
 
 export default function Auth({ setLoginStatus, loginStatus }) {
+  const toast = useToast();
   const [current, setCurrent] = useState();
   const navigate = useNavigate();
 
@@ -22,13 +24,18 @@ export default function Auth({ setLoginStatus, loginStatus }) {
       try {
         if (user) {
           if (!user.email.includes("n00")) {
-            alert("not ncc");
+            toast({
+              title: "Not an NCC email!",
+              status: "error",
+              duration: 5000,
+              isClosable: true,
+              position: "top",
+            });
             logout();
             return;
           }
 
           setLoginStatus(true);
-          console.log("logged in");
 
           const { displayName, uid } = user;
 
@@ -43,9 +50,15 @@ export default function Auth({ setLoginStatus, loginStatus }) {
           }
 
           setCurrent(docSnap.data().currentQuestion);
+          toast({
+            title: "Succesfully logged in!",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+            position: "top",
+          });
         } else {
           setLoginStatus(false);
-          console.log("not logged in");
         }
       } catch (e) {
         console.error("auth", e);

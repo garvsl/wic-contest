@@ -6,7 +6,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
   grid-template-columns: 1fr;
   margin: 0;
   overflow: hidden;
@@ -21,9 +21,9 @@
 }
 
 .questionCover {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
 }
@@ -36,10 +36,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: flex-end;
+  align-self: center;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 #theAlert {
   position: absolute;
   top: 0px;
+}
+
+.submitUpload {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  gap: 50px;
+  align-items: center;
 }

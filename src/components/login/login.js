@@ -17,7 +17,7 @@ export default function Login() {
                 to start!
                 <br />
                 <br />
-                Each question will be timed, dont close the tab, and no using
+                Complete each question as efficiently as you can, no using
                 chatGPT/ any other AI! (You can google)
               </p>
               <div className="hero-cta">
