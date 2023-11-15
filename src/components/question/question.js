@@ -5,7 +5,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import Header from "../homepage/header";
 import "./question.css";
 import FileSubmit from "./fileSubmit";
-import { Skeleton, SkeletonText } from "@chakra-ui/react";
+import { Skeleton, SkeletonText, Text } from "@chakra-ui/react";
 
 export default function Question() {
   const [isLoading, setIsLoading] = useState(false);
@@ -72,7 +72,10 @@ export default function Question() {
               <p>
                 {questionData.question.split("Step").map((text, index) => (
                   <span key={index}>
-                    {text}
+                    {text.split("\\n").map((t, i) => (
+                      <Text key={i}>{t}</Text>
+                    ))}
+                    {/* ^ Where the questions text is */}
                     {index !==
                       questionData.question.split("Step").length - 1 && (
                       <>

@@ -24,13 +24,13 @@ export default function Prizes() {
             templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
           >
             <Card backgroundColor="blackAlpha.300" maxW="lg">
-              <Badge width={"fit-content"} colorScheme="green">
+              {/* <Badge marginLeft={"2"} marginTop={"2"}  width={"fit-content"} colorScheme="green">
                 1st
-              </Badge>
+              </Badge> */}
               <CardHeader>
                 <Flex justifyContent="center">
                   <Heading color="white" size="sm">
-                    Samsung 27" Monitor
+                    Samsung 21.5" Monitor
                   </Heading>
                 </Flex>
               </CardHeader>
@@ -44,13 +44,13 @@ export default function Prizes() {
             </Card>
 
             <Card backgroundColor="blackAlpha.300" maxW="lg">
-              <Badge width={"fit-content"} colorScheme="purple">
+              {/* <Badge marginLeft={"2"} marginTop={"2"} width={"fit-content"} colorScheme="purple">
                 2nd
-              </Badge>
+              </Badge> */}
               <CardHeader>
                 <Flex justifyContent="center">
                   <Heading color="white" size="sm">
-                    Logitech Mech Keyboard
+                    Redragon Keyboard
                   </Heading>
                 </Flex>
               </CardHeader>
@@ -64,13 +64,13 @@ export default function Prizes() {
             </Card>
 
             <Card backgroundColor="blackAlpha.300" maxW="lg">
-              <Badge width={"fit-content"} colorScheme="pink">
+              {/* <Badge marginLeft={"2"} marginTop={"2"}  width={"fit-content"} colorScheme="pink">
                 3rd
-              </Badge>
+              </Badge> */}
               <CardHeader>
                 <Flex justifyContent="center">
                   <Heading color="white" size="sm">
-                    Razer Kraken Headset
+                    Libre Computer Board
                   </Heading>
                 </Flex>
               </CardHeader>

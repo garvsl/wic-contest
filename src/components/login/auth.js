@@ -51,6 +51,7 @@ export default function Auth({ setLoginStatus, loginStatus }) {
 
           setCurrent(docSnap.data().currentQuestion);
           toast({
+            
             title: "Succesfully logged in!",
             status: "success",
             duration: 5000,
@@ -71,7 +72,7 @@ export default function Auth({ setLoginStatus, loginStatus }) {
   const navigateQuestion = async () => {
     navigate(`question/${current}`);
   };
-
+  
   //not  working for some reason but simply jsut direct them to the question that they hav ein the db
   //make sure that they cant go back in tabs or forward and that they can only access the one that their currentq uestion is
 

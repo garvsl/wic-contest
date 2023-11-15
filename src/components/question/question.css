@@ -10,6 +10,7 @@
   grid-template-columns: 1fr;
   margin: 0;
   overflow: hidden;
+  overflow-y: scroll;
   padding: 0;
   justify-content: flex-start;
 }
